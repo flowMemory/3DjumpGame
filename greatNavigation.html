@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' name='viewport' />
+	<title>纵横四海</title>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        window.onresize = function () {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        };
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="bodyDom">
+	<!-- 原有触发 -->
+	<div class="bar" id="bar"></div>
+	<!-- load -->
+	<div class="load" id="load">
+		<div class="game-pic"></div>
+		<div class="game-title"></div>
+		<div class="progress-wrapper">
+			<div class="pro-icon" id="proIcon"></div>
+			<div class="pro-bg">
+				<div class="pro-bar">
+					<img id="proBar" src="images/ui/progress-bar.png">
+				</div>
+			</div>
+		</div>
+		<div class="progress-text">0 %</div>
+	</div>
+	<!-- 开始页面 -->
+	<div class="start-page back-style">
+		<div class="game-title back-style"></div>
+		<div class="start-btn-groups">
+			<div class="rank-btn back-style"></div>
+			<div class="start-btn back-style"></div>
+			<div class="rule-btn back-style"></div>
+		</div>
+	</div>
+	<!-- 计分板 -->
+	<div class="score-panel disHidden">
+		<div class="reputation-wrapper">
+			<div class="pic-wrapper">
+				<div class="user-pic-shade back-style"></div>
+				<img class="user-pic" src="images/ui/scoring/nick-pic.jpg">
+			</div>
+			<div class="reputation-groups">
+				<div class="navigation-group reputation-g">
+					<div class="navigation-icon reputation-icon back-style"></div>
+					<div class="navigation-val reputation-val" id="navigationVal">0</div>
+				</div>
+				<div class="explore-group reputation-g">
+					<div class="explore-icon reputation-icon back-style"></div>
+					<div class="explore-val reputation-val" id="exploreVal">0</div>
+				</div>
+				<div class="pirate-group reputation-g">
+					<div class="pirate-icon reputation-icon back-style"></div>
+					<div class="pirate-val reputation-val" id="pirateVal">0</div>
+				</div>
+			</div>
+		</div>
+		<div class="asset-wrapper">
+			<div class="gold-group asset-group">
+				<div class="gold-icon asset-icon back-style"></div>
+				<div class="gold-val asset-val" id="goldVal">1000</div>
+			</div>
+			<div class="goods-group asset-group">
+				<div class="goods-icon asset-icon back-style"></div>
+				<div class="goods-val asset-val" id="goodsVal">200</div>
+			</div>
+			<div class="sailor-group asset-group">
+				<div class="sailor-icon asset-icon back-style"></div>
+				<div class="sailor-val asset-val" id="sailorVal">50</div>
+			</div>
+		</div>
+	</div>
+	<!-- 普通tips -->
+	<div class="cons-tips back-style" id="consTips">
+		<div class="close-btn back-style"></div>
+		<div class="event-cons" id="eventCons"></div>
+	</div>
+	<!-- 成就tips -->
+	<div class="cons-tips achievement-tips  back-style" id="achievementTips">
+		<div class="close-btn back-style"></div>
+		<div class="achievement-cons" id="achievementCons">恭喜您获得西班牙爵士称号！！！</div>
+		<div class="tips-btn-groups">
+			<div class="reject-award back-style" id="rejectAward"></div>
+			<div class="accept-award back-style" id="acceptAward"></div>
+		</div>
+		<div class="over-btn-groups">
+			<div class="return-home back-style" id="returnHome"></div>
+			<div class="again-game back-style" id="againGame"></div>
+		</div>
+	</div>
+    <!-- 排行页面 -->
+    <div class="rank-group fun">
+        <div class="rank-list" id="rankList">
+        	<div class="rank-title back-style"></div>
+            <div class="rank-list-wrapper" id="rankListWrapper">
+                <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称</div>
+                    <div class="player-score">888888</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">888888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                                            <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div class="peo-pic"><img src="images/ui/rank/nick-pic.jpg"></div>
+                    <div class="player-name">昵称昵称</div>
+                    <div class="player-score">8888</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="rank-type-icon"></div>
+    </div>
+	<!-- 事件接受层 -->
+	<div class="touch-ele" id="touchEle"></div>
+</body>
+</html>
+<script src="libs/jquery-2.1.4.min.js"></script>
+<script src="libs/three.min.js"></script>
+<script src="libs/load/MTLLoader.js"></script>
+<script src="libs/load/OBJLoader.js"></script>
+<script src="libs/OrbitControls.js"></script>
+<script src="libs/stats.min.js"></script>
+<script src="libs/TweenMax.min.js"></script>
+<script src="libs/preloadjs-0.6.2.min.js"></script>
+<script src="libs/soundjs-0.6.2.min.js"></script>
+<script src="js/preload-0.1.0.js"></script>
+<script src="js/tips.js"></script>
+<script src="js/boatMessage.js"></script>
+<script src="js/main.min.js?v=1.0"></script>
+<script src="js/handle.js?v=1.0"></script>
